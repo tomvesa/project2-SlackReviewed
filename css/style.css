@@ -1,0 +1,385 @@
+/* ------------fonts------------*/
+@font-face {
+    font-family: "Titillium Web"; 
+    src: url("/fonts/Titillium-Bold.otf") format("otf"),
+         url("/fonts/Titillium-BoldItalic.otf") format("otf"),
+         url("/fonts/Titillium-Light.otf") format("otf"),
+         url("/fonts/Titillium-LightItalic.otf") format("otf"),
+         url("/fonts/Titillium-Regular.otf") format("otf"),
+         url("/fonts/Titillium-RegularItalic.otf") format("otf"),
+         url("/fonts/Titillium-Semibold.otf") format("otf"),
+         url("/fonts/Titillium-SemiboldItalic.otf") format("otf")
+  }
+
+@font-face{  
+  font-family: "Nunito";
+        src:  url("/fonts/Nunito-Black.ttf") format("ttf"),
+                url("/fonts/Nunito-Bold.ttf") format("ttf"),
+                url("/fonts/Nunito-Regular.ttf") format("ttf"),
+                url("/fonts/Nunito-Italic.ttf") format("ttf")
+}
+
+/* -------  base styles -------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #32404e
+    
+}
+
+header, footer, #contact {
+    background: #f2f2f28c;
+    padding: 2em 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Nunito', sans-serif;
+ font-weight: 700;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #751f6e;
+}
+
+/* ----- Layout Styles ------ */
+
+.header-top {
+    text-align: center;
+}
+
+.header-bottom {
+    text-align: center;
+    margin-top: 15px
+}
+
+.header-bottom p {
+    padding: 0 20px;
+    text-align: initial
+}
+
+.main-nav li {
+  padding: 5px 0;
+  border-bottom: 1px solid #b5b1b17a;
+  font-weight: 600;
+}
+
+.main-nav li:last-child {
+  border-bottom: navajowhite
+}
+
+.main-nav li:hover {
+  background: #b0c4de;
+  box-shadow: 0 1px 15px -6px;
+  color: #fff;
+}
+
+.main-nav li a, .footer-nav a {
+  display: block;
+  letter-spacing: 2px;  
+  color: inherit;  
+}
+
+.main-nav li a:hover {
+  letter-spacing: 2px;   
+  color: whitesmoke;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+.introduction,
+.card-text, .contact-message, .contact-section ul, .new-skills {
+    text-align: center;
+}
+
+.contact-value{
+    font-weight: 700;
+}
+/*----------main content ---------- */
+.section-title {
+    font-size: 1.7rem;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 3px #b5b1b1;
+    color: #732586;
+}
+
+#contact {
+    border-bottom: 1px solid #b5b1b17a;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 1;
+}
+/*  -------New Skills---------*/
+
+.new-skills {
+    padding: 15px;
+    background: #dbd6d670;
+
+}
+
+.skills-list li{
+    display:inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: #b0c4de;
+    border-radius: 5px;
+    border: 1px solid #6f357e5d; 
+    box-shadow: 0 1px 15px -6px;
+}
+
+.skills-list li:hover{
+    transform: scale(.95);
+    box-shadow: none;
+    border: 1px solid #6f357ed5;
+}
+
+/* ---- FOOTER ----- */
+
+footer {
+    min-height: 10em;
+    padding: 2em 25px ;
+}
+
+.footer-nav {
+    display: none;
+}
+
+footer .name, .mob-nav {
+    display: inline-block;
+}
+
+footer .name {
+    float: left;
+}
+
+.mob-nav {
+    float: right;
+    position: relative;
+    top: 6px;
+}
+
+.mob-nav a{
+    color: black;
+}
+
+footer::after {
+    content: "";
+    clear: both;
+}
+
+
+
+
+/* -------- MEDIA QUERIES ----------*/
+@media screen and (min-width: 768px) {
+header, main, .contact-section, .new-skills {
+    font-size: 125%;
+}
+
+main {
+    padding: 0px;
+    text-align: center;
+}
+.main-nav li, .footer-nav li{
+    display: inline-flex;
+    margin: 5px;
+    border-bottom: none;
+    padding:  0 10px;
+}
+
+.main-nav li:hover{
+    border-radius: 3px;
+    box-shadow: 0 2px 10px -4px #0000005c;
+}
+
+.header-bottom{
+    position: relative;
+}
+.header-bottom img {
+    float: right;
+    max-height: 200px;
+    max-width: 35%;
+    margin: 8px 0 8px 8px;
+}
+.introduction {
+    max-width: 60%;
+    top: 0px;
+}
+header ::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.section-card {
+    width:50%;
+    float: left;
+    padding: 10px;
+    min-height: 480px;    
+}
+
+.section-card img{
+    top:0px;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-top:8px;
+}
+
+main ::after{
+    content: '';
+    clear: left;
+    display: block;
+}
+
+/* -----Contact section ------ */
+
+
+.contact-message{
+    margin: 0 3rem;
+}
+.contact-section ul{
+    margin-top: 1em;
+}
+
+/* ----------new skills---------*/
+.new-skills{
+    padding-bottom: 30px;
+}
+
+.new-skills li{
+    margin: 0 15px;
+}
+
+/*---------footer---------*/
+.mob-nav {
+    display: none;
+}
+.footer-nav {
+    display: block;
+    float: right;
+    margin-top: 6px;
+}
+
+
+
+}
+
+/* -------- MEDIA QUERIES ----------*/
+@media screen and (min-width: 1024px) {
+header, main, .contact-section {
+        font-size: 135%;
+    }
+
+header, footer, .contact-section {
+    background: none;
+}
+body {
+    background: #f2f2f28c;
+    
+}
+
+/* -----header ---*/
+header {
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+.header-top {
+    font-size: 135%;
+}
+
+.main-nav {
+    float: right;
+    position: relative;
+    top: 30px
+    
+}
+
+.name {
+    float:left;
+}
+
+.introduction {
+    font-size: 135%;
+    font-weight: 500;
+    }
+
+.header-bottom p{
+    padding: 0px;
+}
+
+
+main {
+     background: #ffffff;
+     padding: 15px;
+     max-width: 92%; 
+     
+}
+
+main, header, footer, .contact-section,.new-skills{
+    margin: 0 4%;
+}
+    .section-card {
+        width:33.3%;
+        float: left;
+        padding: 10px;
+        min-height: 500px;
+    }
+
+    .header-bottom img {
+        max-height: 300px;
+        max-width: 35%;
+        margin: 8px 15px 8px 8px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+ .new-skills {
+     position: relative;
+ }    
+
+ .skills-list {
+     max-width: 30%;
+     top: 20px;
+     right: 5%;
+     position: absolute;
+     margin: 5px 2%;
+     
+ }
+ .skills-list li {
+     display: block; 
+ }
+
+ .skills-list li{
+    margin-top: 5px;
+ }
+ 
+
+ .skills-message {
+     max-width: 70%;
+ }
+
+}
